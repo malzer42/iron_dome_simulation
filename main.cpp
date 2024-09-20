@@ -13,7 +13,7 @@
 #include <random>
 #include <ctime>
 
-int main(int argc, char const *argv[])
+int main(void)
 {
     std::cout << "This section deals with the Bitwise Operations\n";
     std::cout << "-------------   AIR DEFENSE SYSTEM   -------------------\n";
@@ -57,6 +57,7 @@ int main(int argc, char const *argv[])
             {
                 std::cout << "\nOptimal Position for the Iron Dome Launcher\n";
             }
+            break;
 
         case 0b10:
             terroristRockets = i;
@@ -71,11 +72,13 @@ int main(int argc, char const *argv[])
             if (terroristRockets ^ ironDomeInterceptors)
             {
                 std::cout << "\nIron Dome Launcher destroyed\n";
+
             }
             else
             {
                 std::cout << "\nOptimal Position for the Iron Dome Launcher\n";
             }
+            break;
 
         case 0b11:
             terroristRockets = (!trigger << 0b11);
@@ -95,6 +98,7 @@ int main(int argc, char const *argv[])
             {
                 std::cout << "\nOptimal Position for the Iron Dome Launcher\n";
             }
+            break;
 
         default:
             terroristRockets = (~trigger << i);
